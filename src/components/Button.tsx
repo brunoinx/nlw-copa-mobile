@@ -15,6 +15,7 @@ export function Button({ title, type = "PRIMARY", ...rest }: ButtonProps) {
       bg={type === "PRIMARY" ? "white" : "yellow.500"}
       _pressed={{
         opacity: "70",
+        bg: type === "PRIMARY" ? "gray.100" : "yellow.200",
       }}
       {...rest}
     >
