@@ -9,8 +9,6 @@ import { useAuth } from "@/hooks/useAuth";
 export function SignIn() {
   const { signIn, user } = useAuth();
 
-  console.log(user);
-
   return (
     <Center flex={1} bg="gray.900">
       <Flex w="4/5" alignItems="center" mt="8">
@@ -22,6 +20,7 @@ export function SignIn() {
           title="Continuar com o google"
           rounded={"3xl"}
           leftIcon={<GoogleIcon height={32} />}
+          onPress={signIn}
         />
 
         <Text color="gray.300" lineHeight="lg" mt="7" textAlign="center">
