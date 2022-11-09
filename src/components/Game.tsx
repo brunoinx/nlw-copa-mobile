@@ -1,8 +1,8 @@
-import { Button, HStack, Text, useTheme, VStack } from "native-base";
-import { X, Check } from "phosphor-react-native";
-import { getName } from "country-list";
+import { Button, HStack, Text, useTheme, VStack } from 'native-base';
+import { X, Check } from 'phosphor-react-native';
+import { getName } from 'country-list';
 
-import { Team } from "./Team";
+import { Team } from './Team';
 
 interface GuessProps {
   id: string;
@@ -47,7 +47,7 @@ export function Game({
       p={4}
     >
       <Text color="gray.100" fontFamily="heading" fontSize="sm">
-        {getName(data.firstTeamCountryCode)} vs.{" "}
+        {getName(data.firstTeamCountryCode)} vs.{' '}
         {getName(data.secondTeamCountryCode)}
       </Text>
 

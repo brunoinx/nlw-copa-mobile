@@ -1,4 +1,4 @@
-import { Avatar, Center, HStack, Text } from "native-base";
+import { Avatar, Center, HStack, Text } from 'native-base';
 
 export interface ParticipantProps {
   id: string;
@@ -17,7 +17,7 @@ export function Participants({ participants, count }: Props) {
   return (
     <HStack>
       {participants &&
-        participants.map((participant) => (
+        participants.map(participant => (
           <Avatar
             key={participant.id}
             source={{ uri: participant.user.avatarUrl }}

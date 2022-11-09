@@ -1,9 +1,9 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
-import * as Google from "expo-auth-session/providers/google";
-import * as WebBrowser from "expo-web-browser";
-import * as AuthSession from "expo-auth-session";
+import { createContext, ReactNode, useEffect, useState } from 'react';
+import * as Google from 'expo-auth-session/providers/google';
+import * as WebBrowser from 'expo-web-browser';
+import * as AuthSession from 'expo-auth-session';
 
-import { credentials } from "../../keys/credentials";
+import { credentials } from '../../keys/credentials';
 
 WebBrowser.maybeCompleteAuthSession();
 
@@ -27,7 +27,7 @@ export function AuthContextProvider({ children }: { children: ReactNode }) {
   const [request, response, promptAsync] = Google.useAuthRequest({
     clientId: credentials.client_id,
     redirectUri: AuthSession.makeRedirectUri({ useProxy: true }),
-    scopes: ["profile", "email"],
+    scopes: ['profile', 'email'],
   });
 
   async function signIn() {
@@ -35,17 +35,18 @@ export function AuthContextProvider({ children }: { children: ReactNode }) {
       setIsUserLoading(true);
       await promptAsync();
     } catch (error) {
+      console.log('🚀 ~ file: auth.tsx ~ line 38 ~ signIn ~ error', error);
     } finally {
       setIsUserLoading(false);
     }
   }
 
   async function signInWithGoogle(access_token: string) {
-    console.log("TOKEN DE AUTENTICAÇÃO ===> ", access_token);
+    console.log('TOKEN DE AUTENTICAÇÃO ===> ', access_token);
   }
 
   useEffect(() => {
-    if (response?.type === "success" && response.authentication?.accessToken) {
+    if (response?.type === 'success' && response.authentication?.accessToken) {
       signInWithGoogle(response.authentication.accessToken);
     }
   }, [response]);

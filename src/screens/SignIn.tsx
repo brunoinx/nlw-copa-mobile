@@ -1,10 +1,10 @@
-import { Center, Box, Flex, Text } from "native-base";
+import { Center, Box, Flex, Text } from 'native-base';
 
-import Logo from "@/assets/logo.svg";
-import GoogleIcon from "@/assets/icons/google.svg";
+import Logo from '@/assets/logo.svg';
+import GoogleIcon from '@/assets/icons/google.svg';
 
-import { Button } from "@/components/Button";
-import { useAuth } from "@/hooks/useAuth";
+import { Button } from '@/components/Button';
+import { useAuth } from '@/hooks/useAuth';
 
 export function SignIn() {
   const { signIn, user } = useAuth();
@@ -18,13 +18,13 @@ export function SignIn() {
 
         <Button
           title="Continuar com o google"
-          rounded={"3xl"}
+          rounded={'3xl'}
           leftIcon={<GoogleIcon height={32} />}
           onPress={signIn}
         />
 
         <Text color="gray.300" lineHeight="lg" mt="7" textAlign="center">
-          Não utilizamos nenhuma informação além {"\n"}
+          Não utilizamos nenhuma informação além {'\n'}
           do seu e-mail para criação de sua conta.
         </Text>
       </Flex>
