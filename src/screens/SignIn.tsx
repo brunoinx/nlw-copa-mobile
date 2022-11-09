@@ -18,6 +18,7 @@ export function SignIn() {
 
         <Button
           title="Continuar com o google"
+          type="PRIMARY"
           rounded={'3xl'}
           leftIcon={<GoogleIcon height={32} />}
           onPress={signIn}

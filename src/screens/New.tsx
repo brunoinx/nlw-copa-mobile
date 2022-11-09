@@ -25,7 +25,7 @@ export function New() {
         </Heading>
 
         <Input placeholder="Qual o nome do seu bolão?" mb={4} />
-        <Button title="Criar meu bolão" type="SECONDARY" />
+        <Button title="Criar meu bolão" />
 
         <Text color="gray.200" fontSize="sm" textAlign="center" px="2" mt="4">
           Após criar seu bolão, você receberá um código único que poderá usar

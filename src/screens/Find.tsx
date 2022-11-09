@@ -22,7 +22,7 @@ export function Find() {
         </Heading>
 
         <Input placeholder="Qual o código do bolão?" mb={4} />
-        <Button title="Buscar bolão" type="SECONDARY" />
+        <Button title="Buscar bolão" />
       </VStack>
     </VStack>
   );
